@@ -25,6 +25,6 @@ func New(ctx context.Context, next http.Handler, config *Config, name string) (h
 }
 
 func (e *JtResponse) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
-	rw.Header().Add("Plugin Auth", "jtthink.com")
+	rw.Header().Add("Author", "jtthink.com")
 	e.next.ServeHTTP(rw, req)
 }
