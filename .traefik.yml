@@ -4,3 +4,7 @@ type: middleware
 import: github.com/shenyisyn/tkresponse
 
 summary: 'traefik plugin test by jtthink.com'
+
+testData:
+  Headers:
+    Foo: Bar
