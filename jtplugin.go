@@ -18,7 +18,10 @@ type JtResponse struct {
 }
 
 func New(ctx context.Context, next http.Handler, config *Config, name string) (http.Handler, error) {
-	return &JtResponse{}, nil
+	return &JtResponse{
+		next: next,
+		name: name,
+	}, nil
 }
 
 func (e *JtResponse) ServeHTTP(rw http.ResponseWriter, req *http.Request) {
